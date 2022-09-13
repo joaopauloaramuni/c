@@ -1,4 +1,4 @@
 # c
 Repo C
 
-![alt text](site_c.png)
+![](./site_c.png) 
