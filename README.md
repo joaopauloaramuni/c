@@ -30,6 +30,7 @@
 
 **Os projetos deste repositório são de 2010 e 2011.**
 
-Novos projetos em C (2024 e 2025): https://github.com/joaopauloaramuni/algoritmos-e-estruturas-de-dados-i
+Novos projetos em C (2024 e 2025):  
+- https://github.com/joaopauloaramuni/algoritmos-e-estruturas-de-dados-i
 
 -----
