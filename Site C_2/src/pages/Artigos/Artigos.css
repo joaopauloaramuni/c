@@ -1,0 +1,98 @@
+/* Linha do tempo dos artigos: o ano na calha, como número de linha */
+.artigos {
+  list-style: none;
+  margin: 1rem 0 0;
+  padding: 0;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: clip;
+}
+
+.artigo {
+  display: grid;
+  grid-template-columns: 6.5rem 1fr auto;
+  gap: 1.4rem;
+  padding: 1.35rem 1.25rem 1.35rem 0;
+  border-bottom: 1px solid var(--line);
+  transition: background-color 0.15s;
+}
+
+.artigo:last-child {
+  border-bottom: 0;
+}
+
+.artigo:hover {
+  background: var(--panel-2);
+}
+
+.artigo__ano {
+  margin: 0;
+  padding-right: 1.1rem;
+  text-align: right;
+  border-right: 1px solid var(--line);
+  font-size: 1.5rem;
+  font-weight: 750;
+  letter-spacing: -0.04em;
+  color: var(--syn-number);
+  line-height: 1.2;
+}
+
+.artigo__titulo {
+  font-size: 1rem;
+  margin-bottom: 0.25rem;
+  line-height: 1.35;
+}
+
+.artigo__titulo a {
+  color: var(--text);
+  text-decoration: none;
+}
+
+.artigo__titulo a:hover {
+  color: var(--peri-ink);
+  text-decoration: underline;
+}
+
+.artigo__autor {
+  margin: 0 0 0.5rem;
+  font-weight: 600;
+  font-size: 0.85rem;
+  color: var(--steel-ink);
+}
+
+.artigo__desc {
+  margin: 0 0 0.5rem;
+  color: var(--muted);
+  font-size: 0.84rem;
+  line-height: 1.65;
+  max-width: 76ch;
+}
+
+.artigo__meta {
+  margin: 0;
+  font-size: 0.74rem;
+  color: var(--faint);
+}
+
+.artigo__acoes {
+  display: flex;
+  gap: 0.4rem;
+  align-items: flex-start;
+}
+
+@media (max-width: 720px) {
+  .artigo {
+    grid-template-columns: 4.5rem 1fr;
+    gap: 1rem;
+  }
+
+  .artigo__ano {
+    font-size: 1.15rem;
+    padding-right: 0.75rem;
+  }
+
+  .artigo__acoes {
+    grid-column: 2;
+  }
+}

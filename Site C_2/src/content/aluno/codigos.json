@@ -1,0 +1,634 @@
+[
+ {
+  "slug": "aloMundo",
+  "nome": "aloMundo",
+  "arquivos": [
+   {
+    "nome": "aloMundo.c",
+    "linhas": 21
+   }
+  ]
+ },
+ {
+  "slug": "aloMundo2",
+  "nome": "aloMundo2",
+  "arquivos": [
+   {
+    "nome": "aloMundo2.c",
+    "linhas": 18
+   }
+  ]
+ },
+ {
+  "slug": "Aramuni_c",
+  "nome": "Aramuni.c",
+  "arquivos": [
+   {
+    "nome": "Aramuni.c",
+    "linhas": 204
+   }
+  ]
+ },
+ {
+  "slug": "Argumentos",
+  "nome": "Argumentos",
+  "arquivos": [
+   {
+    "nome": "Argumentos.c",
+    "linhas": 26
+   }
+  ]
+ },
+ {
+  "slug": "arvorebinaria",
+  "nome": "arvorebinaria",
+  "arquivos": [
+   {
+    "nome": "arvore.h",
+    "linhas": 54
+   },
+   {
+    "nome": "arvorebinaria.c",
+    "linhas": 34
+   }
+  ]
+ },
+ {
+  "slug": "barulhim",
+  "nome": "barulhim",
+  "arquivos": [
+   {
+    "nome": "barulhim.c",
+    "linhas": 23
+   }
+  ]
+ },
+ {
+  "slug": "Calc2_1",
+  "nome": "Calc2.1",
+  "arquivos": [
+   {
+    "nome": "Calc2.1.c",
+    "linhas": 59
+   }
+  ]
+ },
+ {
+  "slug": "CalcPoint",
+  "nome": "CalcPoint",
+  "arquivos": [
+   {
+    "nome": "CalcPoint.c",
+    "linhas": 62
+   }
+  ]
+ },
+ {
+  "slug": "Calculadora",
+  "nome": "Calculadora",
+  "arquivos": [
+   {
+    "nome": "Calculadora.c",
+    "linhas": 32
+   }
+  ]
+ },
+ {
+  "slug": "Calculadora2",
+  "nome": "Calculadora2",
+  "arquivos": [
+   {
+    "nome": "Calculadora2.c",
+    "linhas": 51
+   }
+  ]
+ },
+ {
+  "slug": "Calculadora_De_Limites",
+  "nome": "Calculadora_De_Limites",
+  "arquivos": [
+   {
+    "nome": "Calculadora_De_Limites.c",
+    "linhas": 1407
+   }
+  ]
+ },
+ {
+  "slug": "Char",
+  "nome": "Char",
+  "arquivos": [
+   {
+    "nome": "CHAR1.c",
+    "linhas": 30
+   }
+  ]
+ },
+ {
+  "slug": "Distancia",
+  "nome": "Distancia",
+  "arquivos": [
+   {
+    "nome": "Distancia.c",
+    "linhas": 42
+   }
+  ]
+ },
+ {
+  "slug": "do_while",
+  "nome": "do_while",
+  "arquivos": [
+   {
+    "nome": "do_while.c",
+    "linhas": 26
+   }
+  ]
+ },
+ {
+  "slug": "ed1_velha",
+  "nome": "ed1_velha",
+  "arquivos": [
+   {
+    "nome": "ed1_velha_JoaoPaulo.c",
+    "linhas": 1015
+   }
+  ]
+ },
+ {
+  "slug": "Esfera",
+  "nome": "Esfera",
+  "arquivos": [
+   {
+    "nome": "Esfera.c",
+    "linhas": 45
+   }
+  ]
+ },
+ {
+  "slug": "exerciciocharint",
+  "nome": "exerciciocharint",
+  "arquivos": [
+   {
+    "nome": "exerciciocharint.c",
+    "linhas": 32
+   }
+  ]
+ },
+ {
+  "slug": "ExerPonteiros",
+  "nome": "ExerPonteiros",
+  "arquivos": [
+   {
+    "nome": "ExerPonteiros.c",
+    "linhas": 29
+   }
+  ]
+ },
+ {
+  "slug": "ExerRevi",
+  "nome": "ExerRevi",
+  "arquivos": [
+   {
+    "nome": "ExerRevi.c",
+    "linhas": 26
+   }
+  ]
+ },
+ {
+  "slug": "ExerRevi2",
+  "nome": "ExerRevi2",
+  "arquivos": [
+   {
+    "nome": "ExerRevi2.c",
+    "linhas": 30
+   }
+  ]
+ },
+ {
+  "slug": "ExerRevi3",
+  "nome": "ExerRevi3",
+  "arquivos": [
+   {
+    "nome": "ExerRevi3.c",
+    "linhas": 30
+   }
+  ]
+ },
+ {
+  "slug": "ExerRevi4",
+  "nome": "ExerRevi4",
+  "arquivos": [
+   {
+    "nome": "ExerRevi4.c",
+    "linhas": 118
+   }
+  ]
+ },
+ {
+  "slug": "exerstruct",
+  "nome": "exerstruct",
+  "arquivos": [
+   {
+    "nome": "exerstruct.c",
+    "linhas": 113
+   }
+  ]
+ },
+ {
+  "slug": "exerstruct2",
+  "nome": "exerstruct2",
+  "arquivos": [
+   {
+    "nome": "exerstruct2.c",
+    "linhas": 85
+   }
+  ]
+ },
+ {
+  "slug": "fatorial",
+  "nome": "fatorial",
+  "arquivos": [
+   {
+    "nome": "fatorial.c",
+    "linhas": 54
+   }
+  ]
+ },
+ {
+  "slug": "Fatorial_Normal",
+  "nome": "Fatorial_Normal",
+  "arquivos": [
+   {
+    "nome": "Fatorial_Normal.c",
+    "linhas": 72
+   }
+  ]
+ },
+ {
+  "slug": "FilaDinamica",
+  "nome": "FilaDinamica",
+  "arquivos": [
+   {
+    "nome": "filaDinamica.c",
+    "linhas": 28
+   },
+   {
+    "nome": "lista.h",
+    "linhas": 92
+   }
+  ]
+ },
+ {
+  "slug": "for",
+  "nome": "for",
+  "arquivos": [
+   {
+    "nome": "for.c",
+    "linhas": 22
+   }
+  ]
+ },
+ {
+  "slug": "frases",
+  "nome": "frases",
+  "arquivos": [
+   {
+    "nome": "frases.c",
+    "linhas": 33
+   }
+  ]
+ },
+ {
+  "slug": "FuncoesStr",
+  "nome": "FuncoesStr",
+  "arquivos": [
+   {
+    "nome": "FuncoesStr.c",
+    "linhas": 51
+   }
+  ]
+ },
+ {
+  "slug": "FunRecUmReturn",
+  "nome": "FunRecUmReturn",
+  "arquivos": [
+   {
+    "nome": "FunRecUmReturn.c",
+    "linhas": 193
+   }
+  ]
+ },
+ {
+  "slug": "getch",
+  "nome": "getch",
+  "arquivos": [
+   {
+    "nome": "getch.c",
+    "linhas": 21
+   }
+  ]
+ },
+ {
+  "slug": "getchar",
+  "nome": "getchar",
+  "arquivos": [
+   {
+    "nome": "getchar.c",
+    "linhas": 29
+   }
+  ]
+ },
+ {
+  "slug": "hanoi",
+  "nome": "hanoi",
+  "arquivos": [
+   {
+    "nome": "hanoi.c",
+    "linhas": 37
+   }
+  ]
+ },
+ {
+  "slug": "Inverte_String_Rec",
+  "nome": "Inverte String Rec",
+  "arquivos": [
+   {
+    "nome": "Inverte String Rec.c",
+    "linhas": 45
+   }
+  ]
+ },
+ {
+  "slug": "josephus",
+  "nome": "josephus",
+  "arquivos": [
+   {
+    "nome": "josephus.c",
+    "linhas": 158
+   }
+  ]
+ },
+ {
+  "slug": "lenght",
+  "nome": "lenght",
+  "arquivos": [
+   {
+    "nome": "lenght.c",
+    "linhas": 32
+   }
+  ]
+ },
+ {
+  "slug": "Letra",
+  "nome": "Letra",
+  "arquivos": [
+   {
+    "nome": "Letra.c",
+    "linhas": 97
+   }
+  ]
+ },
+ {
+  "slug": "ListaCi",
+  "nome": "ListaCi",
+  "arquivos": [
+   {
+    "nome": "ListaCi.c",
+    "linhas": 121
+   }
+  ]
+ },
+ {
+  "slug": "ListaDi",
+  "nome": "ListaDi",
+  "arquivos": [
+   {
+    "nome": "ListaDi.c",
+    "linhas": 213
+   }
+  ]
+ },
+ {
+  "slug": "ListaDupEnc",
+  "nome": "ListaDupEnc",
+  "arquivos": [
+   {
+    "nome": "ListaDupEnc.c",
+    "linhas": 128
+   }
+  ]
+ },
+ {
+  "slug": "ListaDupEncCi",
+  "nome": "ListaDupEncCi",
+  "arquivos": [
+   {
+    "nome": "ListaDupEncCi.c",
+    "linhas": 130
+   }
+  ]
+ },
+ {
+  "slug": "MDC",
+  "nome": "MDC",
+  "arquivos": [
+   {
+    "nome": "MDC.c",
+    "linhas": 44
+   }
+  ]
+ },
+ {
+  "slug": "MenuOpcoes",
+  "nome": "MenuOpcoes",
+  "arquivos": [
+   {
+    "nome": "MENU_OPCOES.c",
+    "linhas": 97
+   }
+  ]
+ },
+ {
+  "slug": "pali",
+  "nome": "pali",
+  "arquivos": [
+   {
+    "nome": "pali.c",
+    "linhas": 43
+   }
+  ]
+ },
+ {
+  "slug": "parouimpar",
+  "nome": "parouimpar",
+  "arquivos": [
+   {
+    "nome": "parouimpar.c",
+    "linhas": 32
+   }
+  ]
+ },
+ {
+  "slug": "Pilha",
+  "nome": "Pilha",
+  "arquivos": [
+   {
+    "nome": "Pilha.c",
+    "linhas": 35
+   },
+   {
+    "nome": "pilha.h",
+    "linhas": 76
+   }
+  ]
+ },
+ {
+  "slug": "polinomio",
+  "nome": "polinomio",
+  "arquivos": [
+   {
+    "nome": "polinomio.c",
+    "linhas": 145
+   }
+  ]
+ },
+ {
+  "slug": "Ponteiros",
+  "nome": "Ponteiros",
+  "arquivos": [
+   {
+    "nome": "Ponteiros.c",
+    "linhas": 29
+   }
+  ]
+ },
+ {
+  "slug": "Pow_Recursivo",
+  "nome": "Pow_Recursivo",
+  "arquivos": [
+   {
+    "nome": "Pow_Recursivo.c",
+    "linhas": 39
+   }
+  ]
+ },
+ {
+  "slug": "PrimeiraFuncao",
+  "nome": "PrimeiraFuncao",
+  "arquivos": [
+   {
+    "nome": "PrimeiraFuncao.c",
+    "linhas": 25
+   }
+  ]
+ },
+ {
+  "slug": "prod",
+  "nome": "prod",
+  "arquivos": [
+   {
+    "nome": "prod.c",
+    "linhas": 24
+   }
+  ]
+ },
+ {
+  "slug": "Recursividade",
+  "nome": "Recursividade",
+  "arquivos": [
+   {
+    "nome": "Recursividade.c",
+    "linhas": 86
+   }
+  ]
+ },
+ {
+  "slug": "Retangulo",
+  "nome": "Retangulo",
+  "arquivos": [
+   {
+    "nome": "Retangulo.c",
+    "linhas": 135
+   }
+  ]
+ },
+ {
+  "slug": "strcpy",
+  "nome": "strcpy",
+  "arquivos": [
+   {
+    "nome": "strcpy.c",
+    "linhas": 34
+   }
+  ]
+ },
+ {
+  "slug": "String_Recursivo",
+  "nome": "String_Recursivo",
+  "arquivos": [
+   {
+    "nome": "String_Recursivo.c",
+    "linhas": 53
+   }
+  ]
+ },
+ {
+  "slug": "StrLenght",
+  "nome": "StrLenght",
+  "arquivos": [
+   {
+    "nome": "StrLenght.c",
+    "linhas": 30
+   }
+  ]
+ },
+ {
+  "slug": "Struct",
+  "nome": "Struct",
+  "arquivos": [
+   {
+    "nome": "Struct.c",
+    "linhas": 54
+   }
+  ]
+ },
+ {
+  "slug": "switch",
+  "nome": "switch",
+  "arquivos": [
+   {
+    "nome": "switch.c",
+    "linhas": 44
+   }
+  ]
+ },
+ {
+  "slug": "testesPtrs",
+  "nome": "testesPtrs",
+  "arquivos": [
+   {
+    "nome": "testesPtrs.c",
+    "linhas": 45
+   }
+  ]
+ },
+ {
+  "slug": "Torre",
+  "nome": "Torre",
+  "arquivos": [
+   {
+    "nome": "Torre.c",
+    "linhas": 60
+   }
+  ]
+ },
+ {
+  "slug": "while",
+  "nome": "while",
+  "arquivos": [
+   {
+    "nome": "while.c",
+    "linhas": 24
+   }
+  ]
+ }
+]

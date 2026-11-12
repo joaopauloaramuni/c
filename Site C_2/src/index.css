@@ -1,0 +1,507 @@
+/* =====================================================================
+   Site C 2.0 - design system "IDE do Site C"
+   Tudo em JetBrains Mono. A paleta vem do style.css de 2011:
+   #61849C (aço, agora a barra de status), #96B0E5 (azul, o destaque),
+   cinzas #A0A0A0 / #919191 / #F0F0F0 e o #161616 do rodapé.
+   Títulos de seção aparecem como comentários de C, como os textos de 2011.
+   ===================================================================== */
+
+:root {
+  --font-mono: "JetBrains Mono Variable", "JetBrains Mono", "Fira Code", ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+  /* Troque por uma fonte sem serifa se quiser o texto corrido fora da monoespaçada */
+  --font-prose: var(--font-mono);
+
+  --max: 1200px;
+  --radius: 6px;
+  --radius-s: 4px;
+  --header-h: 60px;
+  --status-h: 30px;
+
+  /* Light: editor claro */
+  --bg: #eef1f5;
+  --panel: #ffffff;
+  --panel-2: #f5f7fa;
+  --sunken: #e4e9ef;
+  --line: #d6dde5;
+  --line-strong: #b9c4cf;
+  --text: #17202a;
+  --muted: #566577;
+  --faint: #8794a3;
+  --steel: #61849c;
+  --steel-ink: #3f6077;
+  --peri: #96b0e5;
+  --peri-ink: #3456b8;
+  --peri-wash: #e2e9f8;
+  --on-peri: #0e1622;
+  --status-bg: #61849c;
+  --status-text: #ffffff;
+  --shadow: 0 1px 0 rgba(23, 32, 42, 0.04), 0 8px 24px -12px rgba(23, 32, 42, 0.18);
+
+  /* Cores de sintaxe usadas também na interface */
+  --syn-comment: #7a8796;
+  --syn-keyword: #3456b8;
+  --syn-type: #2d7a99;
+  --syn-string: #3a7d50;
+  --syn-number: #a85a1f;
+  --syn-fn: #7a4fb0;
+
+  /* Blocos de código: sempre escuros, como um terminal */
+  --code-bg: #121820;
+  --code-head: #19212b;
+  --code-line: #252f3b;
+  --code-text: #dbe2ea;
+  --code-muted: #7b8898;
+
+  /* Ilustração do laboratório */
+  --lab-wall-back: #e6ebf1;
+  --lab-wall-side: #dde3ea;
+  --lab-ceiling: #eef1f5;
+  --lab-floor: #d3dae2;
+  --lab-line: #9fb0c3;
+  --lab-grid: #c4ced9;
+  --lab-window: #f7f9fb;
+  --lab-board: #f3f5f8;
+  --lab-glow: #3f6fd1;
+  --lab-glow-soft: #c9d8f5;
+  --lab-light: #ffffff;
+  --lab-ac: #f5f7fa;
+  --lab-desk: #cfd6de;
+  --lab-desk-panel: #bcc5cf;
+  --lab-metal: #8f9aa6;
+  --lab-device: #3b4450;
+  --lab-device-side: #2c333c;
+  --lab-device-edge: #1f252c;
+  --lab-chair: #4f6280;
+  --lab-chair-seat: #5d7191;
+  --hero-veil: linear-gradient(90deg, rgba(238, 241, 245, 0.98) 0%, rgba(238, 241, 245, 0.92) 40%, rgba(238, 241, 245, 0.35) 72%, rgba(238, 241, 245, 0.12) 100%);
+
+  color-scheme: light;
+}
+
+:root[data-theme="dark"] {
+  --bg: #0d1217;
+  --panel: #131920;
+  --panel-2: #171e26;
+  --sunken: #0a0e12;
+  --line: #222b36;
+  --line-strong: #324050;
+  --text: #dbe2ea;
+  --muted: #8d9bab;
+  --faint: #5f6d7d;
+  --steel: #7fa0b8;
+  --steel-ink: #9db8cc;
+  --peri: #96b0e5;
+  --peri-ink: #a9c0f0;
+  --peri-wash: #18233a;
+  --on-peri: #0e1622;
+  --status-bg: #4a6a81;
+  --status-text: #f0f4f8;
+  --shadow: 0 1px 0 rgba(0, 0, 0, 0.3), 0 10px 30px -14px rgba(0, 0, 0, 0.7);
+
+  --syn-comment: #6b7888;
+  --syn-keyword: #96b0e5;
+  --syn-type: #7fd0e8;
+  --syn-string: #a8d4a0;
+  --syn-number: #f0b97a;
+  --syn-fn: #c3a6ec;
+
+  --code-bg: #0b1015;
+  --code-head: #10161d;
+  --code-line: #1e2731;
+
+  --lab-wall-back: #1b222b;
+  --lab-wall-side: #171d25;
+  --lab-ceiling: #1e252e;
+  --lab-floor: #141a21;
+  --lab-line: #36475c;
+  --lab-grid: #25303d;
+  --lab-window: #22303f;
+  --lab-board: #202833;
+  --lab-glow: #8fb1f0;
+  --lab-glow-soft: #22406f;
+  --lab-light: #3a4a5e;
+  --lab-ac: #252e39;
+  --lab-desk: #2a333e;
+  --lab-desk-panel: #222a33;
+  --lab-metal: #4a5665;
+  --lab-device: #0e1217;
+  --lab-device-side: #0a0d11;
+  --lab-device-edge: #05070a;
+  --lab-chair: #26344a;
+  --lab-chair-seat: #2f3f58;
+  --hero-veil: linear-gradient(90deg, rgba(13, 18, 23, 0.97) 0%, rgba(13, 18, 23, 0.86) 40%, rgba(13, 18, 23, 0.3) 72%, rgba(13, 18, 23, 0.1) 100%);
+
+  color-scheme: dark;
+}
+
+/* ---------- Reset ---------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  scroll-padding-top: calc(var(--header-h) + 16px);
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-mono);
+  font-size: 0.9375rem;
+  line-height: 1.7;
+  font-feature-settings: "calt" 1, "liga" 1;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+img,
+svg {
+  max-width: 100%;
+}
+
+a {
+  color: var(--peri-ink);
+  text-underline-offset: 4px;
+  text-decoration-thickness: 1px;
+  text-decoration-color: color-mix(in srgb, currentColor 40%, transparent);
+}
+
+a:hover {
+  text-decoration-color: currentColor;
+}
+
+:focus-visible {
+  outline: 2px solid var(--peri);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+::selection {
+  background: color-mix(in srgb, var(--peri) 45%, transparent);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  line-height: 1.15;
+  margin: 0 0 0.5em;
+  letter-spacing: -0.03em;
+  font-weight: 750;
+}
+
+h1 {
+  font-size: clamp(1.9rem, 1.3rem + 2.4vw, 3rem);
+}
+
+h2 {
+  font-size: clamp(1.3rem, 1.1rem + 0.9vw, 1.7rem);
+  letter-spacing: -0.02em;
+}
+
+h3 {
+  font-size: 1.05rem;
+  letter-spacing: -0.01em;
+}
+
+p {
+  margin: 0 0 1em;
+}
+
+pre,
+code,
+kbd {
+  font-family: var(--font-mono);
+}
+
+:not(pre) > code {
+  font-size: 0.9em;
+  color: var(--syn-string);
+  background: var(--sunken);
+  border-radius: 3px;
+  padding: 0.1em 0.35em;
+}
+
+.visually-hidden {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+/* ---------- Layout ---------- */
+.container {
+  width: min(100% - 2.5rem, var(--max));
+  margin-inline: auto;
+}
+
+.page {
+  padding-block: 2.25rem 4.5rem;
+  min-height: calc(100vh - var(--header-h) - 200px);
+}
+
+.prose {
+  max-width: 70ch;
+}
+
+.muted {
+  color: var(--muted);
+}
+
+.pequeno {
+  font-size: 0.82rem;
+}
+
+/* Título de seção como comentário de C: "// Leituras clássicas" */
+.comentario::before {
+  content: "// ";
+  color: var(--syn-comment);
+  font-weight: 400;
+}
+
+/* Números e anos ganham a cor de número da sintaxe */
+.num {
+  color: var(--syn-number);
+  font-variant-numeric: tabular-nums;
+}
+
+/* ---------- Painel (um "arquivo aberto" no editor) ---------- */
+.painel {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: clip;
+}
+
+.painel__aba {
+  display: flex;
+  align-items: stretch;
+  min-height: 38px;
+  background: var(--panel-2);
+  border-bottom: 1px solid var(--line);
+  font-size: 0.8rem;
+}
+
+.painel__arquivo {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0 1rem;
+  background: var(--panel);
+  border-right: 1px solid var(--line);
+  border-top: 2px solid var(--peri);
+  margin-bottom: -1px;
+  color: var(--text);
+}
+
+.painel__arquivo::before {
+  content: "C";
+  display: grid;
+  place-items: center;
+  width: 16px;
+  height: 16px;
+  border-radius: 3px;
+  background: var(--steel);
+  color: #fff;
+  font-size: 0.65rem;
+  font-weight: 800;
+}
+
+.painel__arquivo[data-tipo="md"]::before {
+  content: "M";
+  background: var(--syn-fn);
+}
+
+.painel__arquivo[data-tipo="pdf"]::before {
+  content: "P";
+  background: #c25b4e;
+}
+
+.painel__meta {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  padding: 0 1rem;
+  color: var(--faint);
+}
+
+.painel__corpo {
+  padding: 1.25rem 1.4rem;
+}
+
+/* ---------- Botões ---------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  min-height: 40px;
+  padding: 0.45rem 1rem;
+  border-radius: var(--radius-s);
+  border: 1px solid var(--line-strong);
+  background: transparent;
+  color: var(--text);
+  font: inherit;
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-decoration: none;
+  cursor: pointer;
+  transition: border-color 0.15s, background-color 0.15s, color 0.15s;
+}
+
+.btn:hover {
+  border-color: var(--peri);
+  background: var(--peri-wash);
+}
+
+.btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  background: transparent;
+  border-color: var(--line-strong);
+}
+
+.btn--primary {
+  background: var(--peri);
+  border-color: var(--peri);
+  color: var(--on-peri);
+}
+
+.btn--primary:hover {
+  background: color-mix(in srgb, var(--peri) 85%, #ffffff);
+  border-color: var(--peri);
+}
+
+.btn--ghost {
+  border-color: transparent;
+}
+
+.btn--icon {
+  padding: 0;
+  width: 40px;
+}
+
+/* ---------- Chips ---------- */
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.chip {
+  border: 1px solid var(--line);
+  background: var(--panel);
+  color: var(--muted);
+  border-radius: var(--radius-s);
+  padding: 0.3rem 0.65rem;
+  font: inherit;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+.chip:hover {
+  color: var(--text);
+  border-color: var(--line-strong);
+}
+
+.chip[aria-pressed="true"] {
+  background: var(--peri-wash);
+  border-color: var(--peri);
+  color: var(--text);
+  font-weight: 650;
+}
+
+.chip small {
+  color: var(--syn-number);
+  margin-left: 0.4rem;
+  font-weight: 500;
+  font-size: inherit;
+}
+
+/* ---------- Trilha como caminho de arquivo: ~/professor/projetos ---------- */
+.trilha {
+  font-size: 0.82rem;
+  color: var(--faint);
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.15rem;
+}
+
+.trilha::before {
+  content: "~/";
+  color: var(--steel);
+  font-weight: 700;
+}
+
+.trilha a {
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.trilha a:hover {
+  color: var(--peri-ink);
+  text-decoration: underline;
+}
+
+.trilha span[aria-hidden] {
+  margin-inline: 0.1rem;
+  color: var(--faint);
+}
+
+.trilha > :last-child:not(a) {
+  color: var(--text);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ---------- Cursor piscando (usado no título da home) ---------- */
+.cursor {
+  display: inline-block;
+  width: 0.55em;
+  height: 0.9em;
+  margin-left: 0.12em;
+  vertical-align: -0.06em;
+  background: var(--peri);
+  animation: piscar 1.1s steps(1) infinite;
+}
+
+@keyframes piscar {
+  50% {
+    opacity: 0;
+  }
+}
+
+/* ---------- Avisos e vazio ---------- */
+.vazio {
+  padding: 2.5rem 1.5rem;
+  border: 1px dashed var(--line-strong);
+  border-radius: var(--radius);
+  text-align: center;
+  background: var(--panel);
+}
+
+.bloco {
+  margin-block: 3.5rem;
+}
+
+.bloco > h2 {
+  margin-bottom: 0.5rem;
+}
