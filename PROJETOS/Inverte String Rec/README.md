@@ -1,0 +1,272 @@
+# Projeto Inverte String Rec (C, 2010–2011) ↩️
+
+> **Inverter string (recursivo)**. Código que escrevi como aluno de **Ciência da Computação na Universidade FUMEC**, nas disciplinas de **Estruturas de Dados I e II** do Prof. Rafael Nunes. Grupo: **Strings**.
+
+## 📖 Descrição
+
+Imprime uma string de trás para frente com duas funções recursivas: uma calcula o índice do último caractere e a outra imprime do fim para o começo. No final, abre uma caixa de mensagem do Windows (`MessageBox`) avisando o fim da aplicação.
+
+## 🎯 Conceitos trabalhados
+
+- Recursão com índice decrescente
+- Ternário com operador vírgula
+- API do Windows (`windows.h`)
+
+## 📚 Entendendo o conceito
+
+Este projeto trabalha **Recursividade**, **Strings em C** e **C portável e seguro: do MinGW de 2011 ao C moderno**.
+
+### Recursividade
+
+Uma função **recursiva** resolve um problema chamando a si mesma para uma versão **menor** do mesmo problema. Toda recursão correta tem duas partes:
+
+1. **Caso base**: a versão tão pequena que a resposta é direta (o fatorial de 0 é 1; uma lista vazia tem soma 0).
+2. **Passo recursivo**: reduz o problema e combina o resultado da chamada menor (`n! = n × (n-1)!`).
+
+Cada chamada ganha um espaço próprio na **pilha de chamadas** (*call stack*), com as suas variáveis locais. As chamadas vão sendo empilhadas até o caso base e depois são resolvidas na ordem inversa, "de baixo para cima". Se o caso base nunca é alcançado, a pilha enche e o programa quebra com *stack overflow*.
+
+Todo algoritmo recursivo pode ser reescrito com laços (e uma pilha explícita, se preciso). A recursão vale a pena quando o problema **já é recursivo por natureza**: árvores, divisão e conquista, combinações, *backtracking*.
+
+#### 🌍 Onde é usado na prática
+
+- Percorrer estruturas recursivas: pastas dentro de pastas no sistema de arquivos, o DOM de uma página HTML, um JSON aninhado, árvores de decisão.
+- Algoritmos de divisão e conquista: *Merge Sort*, *Quicksort* (veja o artigo de Hoare, de 1961), busca binária.
+- *Backtracking*: Sudoku, labirintos, problema das 8 rainhas, gerar permutações.
+- Compiladores e interpretadores analisam expressões com funções recursivas (*recursive descent parser*).
+
+#### 💼 Em processos seletivos
+
+Recursão é um dos temas **mais cobrados** em etapas técnicas, de estágio a vagas sênior. Ela aparece sozinha (fatorial, Fibonacci, potência, inverter uma string) e, principalmente, como ferramenta para problemas de árvores, grafos, *backtracking* e programação dinâmica. Os avaliadores costumam pedir para você **explicar a pilha de chamadas**, identificar o caso base e dizer a complexidade de tempo e de memória. Um passo seguinte comum é otimizar o Fibonacci recursivo com **memoização** (guardar resultados já calculados).
+
+Perguntas que costumam aparecer:
+
+- Qual o caso base e o passo recursivo desta função?
+- Qual a complexidade do Fibonacci recursivo ingênuo? Como melhorar? (O(2ⁿ) → O(n) com memoização ou laço.)
+- O que é *stack overflow* e quando acontece em recursão?
+- Converta esta recursão em um laço.
+- O que é recursão de cauda (*tail recursion*)?
+
+#### ⏱️ Complexidade
+
+Depende de quantas chamadas são feitas e do trabalho em cada uma. Fatorial e soma de um vetor fazem n chamadas: O(n) de tempo e O(n) de pilha. Fibonacci ingênuo faz duas chamadas por nível: O(2ⁿ). A memória usada pela pilha cresce com a **profundidade** da recursão.
+
+#### 🐞 Erros comuns
+
+- Esquecer o caso base, ou ter um caso base que nunca é atingido (por exemplo, fatorial de número negativo).
+- Não reduzir o problema a cada chamada.
+- Recalcular os mesmos subproblemas várias vezes (Fibonacci).
+- Usar recursão profunda (milhares de níveis) onde um laço simples resolve.
+
+### Strings em C
+
+C não tem um tipo `string`: uma string é um **vetor de `char` terminado pelo caractere nulo `'\0'`**. A palavra `"FUMEC"` ocupa 6 bytes, 5 letras mais o `'\0'`. Todas as funções de `<string.h>` dependem desse terminador para saber onde o texto acaba.
+
+| Função | O que faz |
+| --- | --- |
+| `strlen(s)` | Conta os caracteres até o `'\0'` (sem contá-lo) |
+| `strcpy(dest, orig)` | Copia `orig` para `dest`, incluindo o `'\0'` |
+| `strcat(dest, orig)` | Acrescenta `orig` no fim de `dest` |
+| `strcmp(a, b)` | Compara: 0 se iguais, negativo ou positivo conforme a ordem |
+
+Nenhuma delas confere o tamanho do destino. Por isso estouros de *buffer* em strings estão entre as falhas de segurança mais antigas e mais exploradas.
+
+#### 🌍 Onde é usado na prática
+
+- Processamento de texto: validar CPF ou e-mail, contar palavras, montar mensagens.
+- Protocolos de rede baseados em texto (HTTP, SMTP) e formatos como CSV e JSON.
+- Falhas históricas de segurança (como o *worm* de Morris, de 1988, que explorou a função `gets`) vieram de strings sem limite de tamanho.
+
+#### 💼 Em processos seletivos
+
+Manipulação de strings é um dos temas mais cobrados: palíndromos, anagramas, inverter palavras, contar caracteres, compressão simples, encontrar uma substring. Em C, também é comum pedirem para **reimplementar** `strlen`, `strcpy` ou `strcmp` sem a biblioteca.
+
+Perguntas que costumam aparecer:
+
+- Implemente `strlen` e `strcpy` com ponteiros.
+- Verifique se duas palavras são anagramas.
+- Inverta as palavras de uma frase.
+- Por que `gets` foi removida da linguagem?
+
+#### ⏱️ Complexidade
+
+`strlen` é O(n), porque precisa percorrer a string até achar o `'\0'`; chamar `strlen` na condição de um `for` deixa o laço O(n²).
+
+#### 🐞 Erros comuns
+
+- Esquecer espaço para o `'\0'`.
+- Comparar strings com `==` (compara endereços, não o texto). Use `strcmp`.
+- Atribuir com `=` depois da declaração (`nome = "Ana";` não compila). Use `strcpy`.
+- Ler com `gets` ou com `scanf("%s")` sem limite. Use `fgets(s, sizeof s, stdin)` ou `scanf("%99s", s)`.
+
+### C portável e seguro: do MinGW de 2011 ao C moderno
+
+Os códigos de 2010–2011 foram escritos no Eclipse com MinGW, no Windows do laboratório, e usam recursos que funcionavam ali mas não são padrão C:
+
+| Recurso de 2011 | Problema | Alternativa portável |
+| --- | --- | --- |
+| `gets(s)` | Removida no C11: não limita o tamanho e permite estouro de *buffer* | `fgets(s, sizeof s, stdin)` |
+| `fflush(stdin)` | Comportamento indefinido no padrão; só limpa a entrada no Windows | `while (getchar() != '\n');` ou `scanf(" %c", &c)` |
+| `conio.h` / `getch()` | Só existe no Windows/DOS | `getchar()`, ou `termios`/ncurses no Linux |
+| `windows.h` / `MessageBox` | API do Windows | `printf` ou uma biblioteca gráfica multiplataforma |
+| `setbuf(stdout, NULL)` | Funciona em todo lugar | Era usado para o console do Eclipse mostrar a saída na hora |
+
+O `setbuf(stdout, NULL)` no início dos programas desliga o *buffer* da saída. Sem ele, o console do Eclipse no Windows só mostrava as mensagens depois do `scanf`, e o usuário digitava sem ver a pergunta.
+
+#### 🌍 Onde é usado na prática
+
+- Código que roda em servidores Linux, contêineres Docker e serviços de integração contínua precisa ser portável.
+- `gets` e outras funções sem limite de tamanho aparecem em listas de falhas de segurança (CWE-242, uso de função perigosa).
+
+#### 💼 Em processos seletivos
+
+Em vagas de C/C++ e de segurança, é comum perguntarem por que `gets` é perigosa, o que é um estouro de *buffer* e como ler uma linha com segurança.
+
+Perguntas que costumam aparecer:
+
+- Por que `gets` foi removida do C11?
+- O que é estouro de *buffer*?
+- Por que `fflush(stdin)` não é portável?
+
+## 🧠 Como funciona o código
+
+```c
+//Função para verificar tamanho da String - Recursiva
+int tamStr(char *str, int cont) {
+    return (*str++) ? cont++, tamStr(str, cont) : --cont;
+}
+```
+
+```c
+//Função para inverter String - Recursiva
+void inverteStr(char *str, int i) {
+    (i) ? imprimeStr(str[i]), inverteStr(str, --i) : imprimeStr(str[i]);
+}
+```
+
+`tamStr` conta os caracteres recursivamente e devolve `--cont`, o índice do último. `inverteStr(str, i)` imprime `str[i]` e chama a si mesma com `i - 1` até chegar a 0. Com FUMEC, imprime CEMUF.
+
+## 💻 Exemplo de execução
+
+> No Windows, a última mensagem aparece numa caixa de diálogo. Na captura, feita no Linux, ela foi trocada por um `printf`.
+
+```text
+** Inverte String **
+
+Digite a String: FUMEC
+String invertida: CEMUF
+
+Pressione ENTER para sair...
+
+[MessageBox] Inverte String: Fim da Aplicação!
+```
+
+## ⚠️ Pontos de atenção
+
+- `windows.h` e `MessageBox` só existem no Windows. Para compilar no Linux ou no macOS, remova o `#include <windows.h>` e a linha do `MessageBox`.
+- Com uma string vazia, `tamStr` devolve -1 e `inverteStr` lê `str[-1]`, fora do vetor.
+- Usa `gets`, removida do C11 por não limitar o tamanho da leitura: digitar mais caracteres do que o vetor comporta escreve fora dele. Troque por `fgets(str, sizeof str, stdin)` e remova o `\n` final. Veja a seção sobre portabilidade.
+
+## 🚀 Como executar
+
+### No terminal (GCC)
+
+Com o GCC instalado (no Windows, pelo [MinGW-w64](https://www.mingw-w64.org/), o mesmo compilador usado em 2011), dentro da pasta do projeto:
+
+```bash
+gcc "src/Inverte String Rec.c" -o Inverte_String_Rec
+./Inverte_String_Rec
+```
+
+> Este programa usa uma biblioteca exclusiva do Windows (`conio.h` ou `windows.h`): compile no Windows com MinGW, ou adapte o código como explicado em **Pontos de atenção**.
+
+> Compiladores atuais avisam (ou recusam) o uso de `gets`. Se o GCC reclamar, compile com `-std=gnu89` ou troque `gets` por `fgets`.
+
+> O `fflush(stdin)` só limpa a entrada no Windows. No Linux e no macOS, algumas leituras podem "pular"; rode no Windows ou adapte como explicado na seção sobre portabilidade.
+
+### No Eclipse IDE for C/C++ Developers
+
+O repositório guarda só a pasta `src` (e a `Debug` gerada em 2011); os arquivos de projeto do Eclipse (`.project` e `.cproject`) não foram versionados. Para abrir:
+
+1. **File → New → C/C++ Project → C Managed Build → Empty Project**, com o *toolchain* **MinGW GCC** (Windows) ou **Linux GCC**.
+2. Copie a pasta `src` deste projeto para dentro do projeto novo e atualize (F5).
+3. **Project → Build Project** (Ctrl + B) e **Run → Run As → Local C/C++ Application** (Ctrl + F11).
+
+### Acentos quebrados?
+
+Os arquivos foram salvos em **ISO-8859-1 (Latin-1)**, o padrão do Eclipse no Windows em 2011. Se os acentos aparecerem como `�`, reabra o arquivo nessa codificação (no VS Code: **Reopen with Encoding → Western (ISO 8859-1)**; no Eclipse: **Edit → Set Encoding**).
+
+> Também dá para colar o código no [OnlineGDB](https://www.onlinegdb.com/) e rodar no navegador, escolhendo a linguagem **C** (o OnlineGDB roda em Linux).
+
+## 🏋️ Para praticar
+
+Exercícios com correção automática sobre o mesmo assunto. O [Beecrowd](https://judge.beecrowd.com/) (antigo URI Online Judge) tem enunciados em português; o [LeetCode](https://leetcode.com/) é a plataforma mais usada para treinar para entrevistas.
+
+- [LeetCode 509: Fibonacci Number](https://leetcode.com/problems/fibonacci-number/)
+- [LeetCode 70: Climbing Stairs](https://leetcode.com/problems/climbing-stairs/)
+- [LeetCode 50: Pow(x, n)](https://leetcode.com/problems/powx-n/)
+- [LeetCode 206: Reverse Linked List (versão recursiva)](https://leetcode.com/problems/reverse-linked-list/)
+- [Beecrowd 1029: Fibonacci, Quantas Chamadas?](https://judge.beecrowd.com/pt/problems/view/1029)
+- [Beecrowd 1153: Fatorial Simples](https://judge.beecrowd.com/pt/problems/view/1153)
+- [LeetCode 344: Reverse String](https://leetcode.com/problems/reverse-string/)
+
+## 📂 Estrutura do projeto
+
+```text
+📁 Inverte String Rec
+│
+├── 📁 src
+│   └── Inverte String Rec.c
+├── 📁 Debug                      └── Gerada pelo Eclipse em 2011 (arquivos objeto .o)
+└── README.md
+```
+
+## 🔗 Projetos relacionados (2010–2011)
+
+- [StrLenght](../StrLenght): Tamanho de string (recursivo)
+- [Letra](../Letra): Menu de opções com strings
+- [FunRecUmReturn](../FunRecUmReturn): Funções recursivas com um único return
+
+## 📚 Documentação e links úteis
+
+**Sobre o assunto deste projeto**
+
+- [Paulo Feofiloff (IME-USP): recursão e algoritmos recursivos](https://www.ime.usp.br/~pf/algoritmos/aulas/recu.html)
+- [VisuAlgo: visualização de recursão](https://visualgo.net/en/recursion)
+- [Wikipedia: recursion (computer science)](https://en.wikipedia.org/wiki/Recursion_(computer_science))
+- [Python Tutor: veja a pilha de chamadas em C](https://pythontutor.com/c.html)
+- [cppreference: biblioteca de strings (<string.h>)](https://en.cppreference.com/w/c/string/byte)
+- [cppreference: strlen](https://en.cppreference.com/w/c/string/byte/strlen)
+- [cppreference: strcpy](https://en.cppreference.com/w/c/string/byte/strcpy)
+- [cppreference: strcmp](https://en.cppreference.com/w/c/string/byte/strcmp)
+- [cppreference: fgets](https://en.cppreference.com/w/c/io/fgets)
+- [cppreference: gets (removida no C11)](https://en.cppreference.com/w/c/io/gets)
+- [cppreference: fflush](https://en.cppreference.com/w/c/io/fflush)
+- [cppreference: setbuf](https://en.cppreference.com/w/c/io/setbuf)
+- [MinGW-w64 (GCC no Windows)](https://www.mingw-w64.org/)
+
+**Ferramentas e referências gerais**
+
+- [Site C (2011): o site original com estes códigos](https://sitec-aramuni.vercel.app/)
+- [Repositório de 2011](https://github.com/joaopauloaramuni/c)
+- [Aulas do Prof. Rafael Nunes (PDF)](https://github.com/joaopauloaramuni/c/tree/main/Site%20C/pdf)
+- [cppreference: referência completa da linguagem C](https://en.cppreference.com/w/c)
+- [Projeto de Algoritmos em C, Paulo Feofiloff (IME-USP)](https://www.ime.usp.br/~pf/algoritmos/)
+- [VisuAlgo: estruturas de dados e algoritmos animados](https://visualgo.net/)
+- [OnlineGDB: compile e rode C no navegador](https://www.onlinegdb.com/)
+- [Eclipse CDT (IDE usada na disciplina)](https://eclipse.dev/cdt/)
+- [GCC: documentação oficial](https://gcc.gnu.org/onlinedocs/)
+
+**Livros**
+
+- KERNIGHAN, B. W.; RITCHIE, D. M. *C: a linguagem de programação – padrão ANSI*. Campus/Elsevier. O livro clássico, escrito por Kernighan com Dennis Ritchie, o criador da linguagem.
+- CELES, W.; CERQUEIRA, R.; RANGEL, J. L. *Introdução a estruturas de dados: com técnicas de programação em C*. Elsevier.
+- FEOFILOFF, P. *Algoritmos em linguagem C*. Campus/Elsevier.
+- CORMEN, T. H. et al. *Algoritmos: teoria e prática*. Elsevier.
+
+## 📄 Licença
+
+Este projeto está licenciado sob a **MIT License**. Veja o arquivo [LICENSE](../../LICENSE) na raiz do repositório.
+
+-----
+
+João Paulo Aramuni, aluno de Ciência da Computação na FUMEC (2010–2011) · [Repositório](https://github.com/joaopauloaramuni/c)
