@@ -1,3 +1,0 @@
-{
-  "rewrites": [{ "source": "/((?!pdf/|pdfjs/|img/|assets/|favicon).*)", "destination": "/index.html" }]
-}
