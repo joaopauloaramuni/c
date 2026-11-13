@@ -1,0 +1,226 @@
+[
+ {
+  "id": "aula02-ed2-recursividade-part01-ok",
+  "titulo": "ED2, aula 02: recursividade parte 1",
+  "original": "AULA02_ED2_RECURSIVIDADE_PART01_OK.pdf",
+  "arquivo": "/pdf/aluno/aula02-ed2-recursividade-part01-ok.pdf",
+  "paginas": 33,
+  "mb": 0.1
+ },
+ {
+  "id": "aula02-ed2-recursividade-part01-solucao-ok",
+  "titulo": "ED2, aula 02: recursividade parte 1 (solução)",
+  "original": "AULA02_ED2_RECURSIVIDADE_PART01_SOLUCAO_OK.pdf",
+  "arquivo": "/pdf/aluno/aula02-ed2-recursividade-part01-solucao-ok.pdf",
+  "paginas": 2,
+  "mb": 0.0
+ },
+ {
+  "id": "aula02-ed2-recursividade-part02-ok",
+  "titulo": "ED2, aula 02: recursividade parte 2",
+  "original": "AULA02_ED2_RECURSIVIDADE_PART02_OK.pdf",
+  "arquivo": "/pdf/aluno/aula02-ed2-recursividade-part02-ok.pdf",
+  "paginas": 25,
+  "mb": 0.1
+ },
+ {
+  "id": "aula02-ed2-recursividade-part03-ok",
+  "titulo": "ED2, aula 02: recursividade parte 3",
+  "original": "AULA02_ED2_RECURSIVIDADE_PART03_OK.pdf",
+  "arquivo": "/pdf/aluno/aula02-ed2-recursividade-part03-ok.pdf",
+  "paginas": 43,
+  "mb": 0.1
+ },
+ {
+  "id": "aula02-introd-ling-c",
+  "titulo": "Aula 02: introdução à linguagem C",
+  "original": "AULA02_INTROD_LING_C.pdf",
+  "arquivo": "/pdf/aluno/aula02-introd-ling-c.pdf",
+  "paginas": 45,
+  "mb": 0.4
+ },
+ {
+  "id": "aula02-introd-ling-c-part2",
+  "titulo": "Aula 02: introdução à linguagem C parte 2",
+  "original": "AULA02_INTROD_LING_C_PART2.pdf",
+  "arquivo": "/pdf/aluno/aula02-introd-ling-c-part2.pdf",
+  "paginas": 49,
+  "mb": 0.2
+ },
+ {
+  "id": "aula02-introd-ling-c-part3",
+  "titulo": "Aula 02: introdução à linguagem C parte 3",
+  "original": "AULA02_INTROD_LING_C_PART3.pdf",
+  "arquivo": "/pdf/aluno/aula02-introd-ling-c-part3.pdf",
+  "paginas": 45,
+  "mb": 0.1
+ },
+ {
+  "id": "aula03-pcomp-variaveis",
+  "titulo": "Aula 03: variáveis",
+  "original": "AULA03_PCOMP_VARIAVEIS.pdf",
+  "arquivo": "/pdf/aluno/aula03-pcomp-variaveis.pdf",
+  "paginas": 36,
+  "mb": 0.2
+ },
+ {
+  "id": "aula04-listas-part1-lista-est",
+  "titulo": "Aula 04: listas parte 1: lista estática",
+  "original": "AULA04_LISTAS_PART1_LISTA_EST.pdf",
+  "arquivo": "/pdf/aluno/aula04-listas-part1-lista-est.pdf",
+  "paginas": 52,
+  "mb": 0.2
+ },
+ {
+  "id": "aula04-pcomp-operadores-todos",
+  "titulo": "Aula 04: operadores",
+  "original": "AULA04_PCOMP_OPERADORES_TODOS.pdf",
+  "arquivo": "/pdf/aluno/aula04-pcomp-operadores-todos.pdf",
+  "paginas": 28,
+  "mb": 0.1
+ },
+ {
+  "id": "aula05-listas-part1-solucao",
+  "titulo": "Aula 05: listas parte 1 (solução)",
+  "original": "AULA05_LISTAS_PART1_SOLUCAO.pdf",
+  "arquivo": "/pdf/aluno/aula05-listas-part1-solucao.pdf",
+  "paginas": 36,
+  "mb": 0.1
+ },
+ {
+  "id": "aula05-listas-part2-fila-semcodigo",
+  "titulo": "Aula 05: listas parte 2: fila (sem código)",
+  "original": "AULA05_LISTAS_PART2_FILA_SEMCODIGO.pdf",
+  "arquivo": "/pdf/aluno/aula05-listas-part2-fila-semcodigo.pdf",
+  "paginas": 64,
+  "mb": 0.4
+ },
+ {
+  "id": "aula05-listas-part2-fila-verificar",
+  "titulo": "Aula 05: listas parte 2: fila (verificar)",
+  "original": "AULA05_LISTAS_PART2_FILA_VERIFICAR.pdf",
+  "arquivo": "/pdf/aluno/aula05-listas-part2-fila-verificar.pdf",
+  "paginas": 64,
+  "mb": 0.2
+ },
+ {
+  "id": "aula05-listas-part3-pilha",
+  "titulo": "Aula 05: listas parte 3: pilha",
+  "original": "AULA05_LISTAS_PART3_PILHA.pdf",
+  "arquivo": "/pdf/aluno/aula05-listas-part3-pilha.pdf",
+  "paginas": 32,
+  "mb": 0.1
+ },
+ {
+  "id": "aula05-listas-part3-sem-codigo",
+  "titulo": "Aula 05: listas parte 3 (sem código)",
+  "original": "AULA05_LISTAS_PART3_SEM_CODIGO.pdf",
+  "arquivo": "/pdf/aluno/aula05-listas-part3-sem-codigo.pdf",
+  "paginas": 23,
+  "mb": 0.1
+ },
+ {
+  "id": "aula05-pcomp-controladores-fluxo",
+  "titulo": "Aula 05: controladores de fluxo",
+  "original": "AULA05_PCOMP_CONTROLADORES_FLUXO.pdf",
+  "arquivo": "/pdf/aluno/aula05-pcomp-controladores-fluxo.pdf",
+  "paginas": 82,
+  "mb": 0.2
+ },
+ {
+  "id": "aula06-pcomp-operacoes-strings",
+  "titulo": "Aula 06: operações com strings",
+  "original": "AULA06_PCOMP_OPERACOES_STRINGS.pdf",
+  "arquivo": "/pdf/aluno/aula06-pcomp-operacoes-strings.pdf",
+  "paginas": 26,
+  "mb": 0.1
+ },
+ {
+  "id": "aula07-pcomp-ponteiros-part1-ok",
+  "titulo": "Aula 07: ponteiros parte 1",
+  "original": "AULA07_PCOMP_PONTEIROS_PART1_OK.pdf",
+  "arquivo": "/pdf/aluno/aula07-pcomp-ponteiros-part1-ok.pdf",
+  "paginas": 37,
+  "mb": 0.1
+ },
+ {
+  "id": "aula0x-listas-circulares",
+  "titulo": "Listas circulares",
+  "original": "AULA0X_LISTAS_CIRCULARES.pdf",
+  "arquivo": "/pdf/aluno/aula0x-listas-circulares.pdf",
+  "paginas": 14,
+  "mb": 0.1
+ },
+ {
+  "id": "aula0x-ordenacao-part01",
+  "titulo": "Ordenação parte 1",
+  "original": "AULA0X_ORDENACAO_PART01.pdf",
+  "arquivo": "/pdf/aluno/aula0x-ordenacao-part01.pdf",
+  "paginas": 71,
+  "mb": 0.3
+ },
+ {
+  "id": "aula0x-ordenacao-part02",
+  "titulo": "Ordenação parte 2",
+  "original": "AULA0X_ORDENACAO_PART02.pdf",
+  "arquivo": "/pdf/aluno/aula0x-ordenacao-part02.pdf",
+  "paginas": 63,
+  "mb": 0.2
+ },
+ {
+  "id": "aula0x-ordenacao-part03",
+  "titulo": "Ordenação parte 3",
+  "original": "AULA0X_ORDENACAO_PART03.pdf",
+  "arquivo": "/pdf/aluno/aula0x-ordenacao-part03.pdf",
+  "paginas": 28,
+  "mb": 0.1
+ },
+ {
+  "id": "ed2-listas-circ",
+  "titulo": "ED2: listas circulares",
+  "original": "ED2_LISTAS_CIRC.pdf",
+  "arquivo": "/pdf/aluno/ed2-listas-circ.pdf",
+  "paginas": 20,
+  "mb": 0.1
+ },
+ {
+  "id": "ed-ponteiros-part1-ok",
+  "titulo": "Ponteiros parte 1",
+  "original": "ED_PONTEIROS_PART1_OK.pdf",
+  "arquivo": "/pdf/aluno/ed-ponteiros-part1-ok.pdf",
+  "paginas": 37,
+  "mb": 0.1
+ },
+ {
+  "id": "ed-structs",
+  "titulo": "Structs",
+  "original": "ED_STRUCTS.pdf",
+  "arquivo": "/pdf/aluno/ed-structs.pdf",
+  "paginas": 41,
+  "mb": 0.1
+ },
+ {
+  "id": "fumec-arvore",
+  "titulo": "Árvore",
+  "original": "FUMEC_ARVORE.pdf",
+  "arquivo": "/pdf/aluno/fumec-arvore.pdf",
+  "paginas": 19,
+  "mb": 0.2
+ },
+ {
+  "id": "fumec-arvore-remocao",
+  "titulo": "Árvore: remoção",
+  "original": "FUMEC_Arvore_Remocao.pdf",
+  "arquivo": "/pdf/aluno/fumec-arvore-remocao.pdf",
+  "paginas": 7,
+  "mb": 0.1
+ },
+ {
+  "id": "hashing-rafael-14062007",
+  "titulo": "Hashing",
+  "original": "Hashing_Rafael_14062007.pdf",
+  "arquivo": "/pdf/aluno/hashing-rafael-14062007.pdf",
+  "paginas": 26,
+  "mb": 0.2
+ }
+]

@@ -1,0 +1,111 @@
+/* Lista de PDFs: um painel com uma linha por documento e o número na calha */
+.docs {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: clip;
+  counter-reset: doc;
+}
+
+.docs__item {
+  counter-increment: doc;
+  display: grid;
+  grid-template-columns: 3.25rem 1fr auto;
+  gap: 1.1rem;
+  align-items: center;
+  padding: 1.1rem 1.1rem 1.1rem 0;
+  border-bottom: 1px solid var(--line);
+  transition: background-color 0.15s;
+}
+
+.docs__item:last-child {
+  border-bottom: 0;
+}
+
+.docs__item:hover {
+  background: var(--panel-2);
+}
+
+.docs__item::before {
+  content: counter(doc);
+  align-self: stretch;
+  display: flex;
+  justify-content: flex-end;
+  padding: 0.1rem 0.85rem 0 0;
+  border-right: 1px solid var(--line);
+  color: var(--faint);
+  font-size: 0.8rem;
+}
+
+.docs--numerada .docs__item::before {
+  content: counter(doc, decimal-leading-zero);
+}
+
+.docs__texto {
+  min-width: 0;
+}
+
+.docs__titulo {
+  font-size: 0.98rem;
+  margin: 0 0 0.3rem;
+}
+
+.docs__titulo a {
+  color: var(--text);
+  text-decoration: none;
+}
+
+.docs__titulo a:hover {
+  color: var(--peri-ink);
+  text-decoration: underline;
+}
+
+.docs__desc {
+  color: var(--muted);
+  font-size: 0.84rem;
+  line-height: 1.6;
+  margin: 0 0 0.4rem;
+  max-width: 76ch;
+}
+
+.docs__meta {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0;
+  font-size: 0.74rem;
+  color: var(--faint);
+}
+
+.docs__meta::before {
+  content: "PDF";
+  padding: 0 0.3rem;
+  border-radius: 3px;
+  background: #c25b4e;
+  color: #fff;
+  font-weight: 800;
+  font-size: 0.62rem;
+  line-height: 1.6;
+}
+
+.docs__acoes {
+  display: flex;
+  gap: 0.4rem;
+}
+
+@media (max-width: 640px) {
+  .docs__item {
+    grid-template-columns: 2.25rem 1fr;
+  }
+
+  .docs__item::before {
+    padding-right: 0.5rem;
+  }
+
+  .docs__acoes {
+    grid-column: 2;
+  }
+}

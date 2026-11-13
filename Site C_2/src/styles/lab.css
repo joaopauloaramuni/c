@@ -1,0 +1,35 @@
+/* Ilustração do laboratório (src/assets/laboratorio.svg). As cores vêm dos tokens --lab-* */
+.lab svg { width: 100%; height: 100%; display: block; }
+.lab polygon, .lab line { vector-effect: non-scaling-stroke; stroke-linejoin: round; }
+.lab-wall-back { fill: var(--lab-wall-back); }
+.lab-wall-side { fill: var(--lab-wall-side); stroke: var(--lab-line); stroke-width: 1; }
+.lab-ceiling { fill: var(--lab-ceiling); stroke: var(--lab-line); stroke-width: 1; }
+.lab-floor { fill: var(--lab-floor); stroke: var(--lab-line); stroke-width: 1; }
+.lab-grid { stroke: var(--lab-grid); stroke-width: 1; }
+.lab-blind { stroke: var(--lab-grid); stroke-width: 1.2; }
+.lab-edge, .lab-tray { stroke: var(--lab-line); stroke-width: 1; fill: var(--lab-ceiling); }
+.lab-window { fill: var(--lab-window); stroke: var(--lab-line); stroke-width: 1.2; }
+.lab-board { fill: var(--lab-board); stroke: var(--lab-line); stroke-width: 1.4; }
+.lab-screen { fill: var(--lab-glow-soft); stroke: var(--lab-glow); stroke-width: 1; }
+.lab-code { stroke: var(--lab-glow); stroke-width: 2; stroke-linecap: round; opacity: .55; }
+.lab-poster { fill: var(--lab-board); stroke: var(--lab-line); stroke-width: 1; }
+.lab-light { fill: var(--lab-light); stroke: var(--lab-line); stroke-width: .8; }
+.lab-light-side { fill: var(--lab-ceiling); stroke: var(--lab-line); stroke-width: .8; }
+.lab-ac { fill: var(--lab-ac); stroke: var(--lab-line); stroke-width: 1; }
+.lab-ac-side { fill: var(--lab-ceiling); stroke: var(--lab-line); stroke-width: 1; }
+.lab-vent { stroke: var(--lab-line); stroke-width: 1.4; }
+.lab-desk-top { fill: var(--lab-desk); stroke: var(--lab-line); stroke-width: 1; }
+.lab-desk-edge { fill: var(--lab-line); }
+.lab-desk-panel { fill: var(--lab-desk-panel); stroke: var(--lab-line); stroke-width: .8; }
+.lab-leg, .lab-stand { fill: var(--lab-metal); }
+.lab-tower { fill: var(--lab-device); stroke: var(--lab-device-edge); stroke-width: .8; }
+.lab-tower-side { fill: var(--lab-device-side); stroke: var(--lab-device-edge); stroke-width: .8; }
+.lab-tower-top { fill: var(--lab-device-edge); }
+.lab-bezel { fill: var(--lab-device); stroke: var(--lab-device-edge); stroke-width: .8; }
+.lab-monitor { fill: var(--lab-glow-soft); }
+.lab-screen-code { stroke: var(--lab-glow); stroke-width: 1.6; stroke-linecap: round; opacity: .8; }
+.lab-keyboard { fill: var(--lab-device-side); }
+.lab-chair { fill: var(--lab-chair); stroke: var(--lab-device-edge); stroke-width: .8; }
+.lab-chair-leg { stroke: var(--lab-metal); stroke-width: 1.6; stroke-linecap: round; }
+.lab-chair-post { stroke: var(--lab-metal); stroke-width: 2.4; stroke-linecap: round; }
+.lab-chair-seat { fill: var(--lab-chair-seat); stroke: var(--lab-device-edge); stroke-width: .8; }

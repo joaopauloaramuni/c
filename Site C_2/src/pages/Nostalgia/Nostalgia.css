@@ -1,0 +1,163 @@
+.nostalgia-tela {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 2.5rem;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+
+/* Moldura com o degradê do body de 2011 (#F0F0F0 → #61849C) */
+.moldura-2011 {
+  margin: 0;
+  padding: 0.75rem;
+  border-radius: var(--radius);
+  background: linear-gradient(#f0f0f0, #61849c);
+  box-shadow: var(--shadow);
+}
+
+.moldura-2011 img {
+  display: block;
+  border: 1px solid #f0f0f0;
+}
+
+.banners {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.banners img {
+  display: block;
+  width: 100%;
+  max-width: 800px;
+  border-radius: var(--radius-s);
+  border: 1px solid var(--line);
+}
+
+.tabela-rolagem {
+  overflow-x: auto;
+}
+
+.tabela-rolagem {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+
+.comparacao {
+  border-collapse: collapse;
+  width: 100%;
+  min-width: 640px;
+  font-size: 0.84rem;
+}
+
+.comparacao tbody tr:last-child th,
+.comparacao tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.comparacao th,
+.comparacao td {
+  border-bottom: 1px solid var(--line);
+  padding: 0.8rem 1rem;
+  text-align: left;
+  vertical-align: top;
+}
+
+.comparacao thead th {
+  border-bottom: 2px solid var(--line);
+}
+
+.comparacao thead th {
+  background: var(--panel-2);
+}
+
+.comparacao thead th:nth-child(2) {
+  color: var(--faint);
+}
+
+.comparacao thead th:nth-child(3) {
+  color: var(--peri-ink);
+}
+
+.comparacao tbody th {
+  color: var(--steel);
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.comparacao td:nth-child(2) {
+  color: var(--muted);
+}
+
+.duas-metades {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+  align-items: start;
+}
+
+.paleta {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.6rem;
+}
+
+.paleta li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.paleta span {
+  width: 28px;
+  height: 28px;
+  border-radius: 2px;
+  border: 1px solid var(--line);
+}
+
+.agradecimentos {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  columns: 2;
+}
+
+.agradecimentos li {
+  padding: 0.3rem 0;
+  display: flex;
+  gap: 0.5rem;
+  break-inside: avoid;
+}
+
+.agradecimentos li > span:first-child {
+  color: var(--syn-comment);
+}
+
+.redes-2011 {
+  list-style: none;
+  margin: 0;
+  padding: 0.75rem 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  background: #161616;
+  border-radius: var(--radius-s);
+}
+
+.redes-2011 li {
+  display: grid;
+  justify-items: center;
+  gap: 0.3rem;
+  color: #c9d1da;
+  font-size: 0.8rem;
+}
+
+@media (max-width: 860px) {
+  .nostalgia-tela,
+  .duas-metades {
+    grid-template-columns: 1fr;
+  }
+}

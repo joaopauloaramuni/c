@@ -1,0 +1,112 @@
+[
+ {
+  "id": "turing-1936",
+  "autor": "Alan Turing",
+  "ano": 1936,
+  "titulo": "On Computable Numbers, with an Application to the Entscheidungsproblem",
+  "grupo": "Histórico e fundacional",
+  "descricao": "Origem da máquina de Turing e da noção de computabilidade. Trabalho seminal que fundamenta toda a teoria da computação.",
+  "arquivo": "/pdf/artigos/turing-1936.pdf",
+  "paginas": 36,
+  "mb": 2.1
+ },
+ {
+  "id": "turing-1950",
+  "autor": "Alan Turing",
+  "ano": 1950,
+  "titulo": "Computing Machinery and Intelligence",
+  "grupo": "Histórico e fundacional",
+  "descricao": "Propõe o jogo da imitação, conhecido como Teste de Turing, e discute se máquinas podem pensar. Marco inicial da inteligência artificial.",
+  "arquivo": "/pdf/artigos/turing-1950.pdf",
+  "paginas": 28,
+  "mb": 0.5
+ },
+ {
+  "id": "cook-1971",
+  "autor": "Stephen Cook",
+  "ano": 1971,
+  "titulo": "The Complexity of Theorem-Proving Procedures",
+  "grupo": "Histórico e fundacional",
+  "descricao": "Introduz o conceito de NP-completude, base da teoria da complexidade, e fundamenta a distinção entre problemas eficientes e intratáveis.",
+  "arquivo": "/pdf/artigos/cook-1971.pdf",
+  "paginas": 8,
+  "mb": 3.0
+ },
+ {
+  "id": "neumann-1945-original",
+  "autor": "John von Neumann",
+  "ano": 1945,
+  "titulo": "First Draft of a Report on the EDVAC (versão original)",
+  "grupo": "Histórico e fundacional",
+  "descricao": "Versão concisa do relatório de 1945 que apresenta a arquitetura de computador com programa armazenado, base dos computadores modernos.",
+  "arquivo": "/pdf/artigos/neumann-1945-original.pdf",
+  "paginas": 49,
+  "mb": 9.3
+ },
+ {
+  "id": "neumann-1945-estendida",
+  "autor": "John von Neumann",
+  "ano": 1945,
+  "titulo": "First Draft of a Report on the EDVAC (versão estendida)",
+  "grupo": "Histórico e fundacional",
+  "descricao": "Edição ampliada, com apêndices, notas e figuras que contextualizam o relatório original.",
+  "arquivo": "/pdf/artigos/neumann-1945-estendida.pdf",
+  "paginas": 107,
+  "mb": 8.1
+ },
+ {
+  "id": "shannon-1948",
+  "autor": "Claude Shannon",
+  "ano": 1948,
+  "titulo": "A Mathematical Theory of Communication",
+  "grupo": "Histórico e fundacional",
+  "descricao": "Estabelece a Teoria da Informação, com os conceitos de entropia, redundância e capacidade de canal. Essencial para codificação, compressão e transmissão de dados.",
+  "arquivo": "/pdf/artigos/shannon-1948.pdf",
+  "paginas": 55,
+  "mb": 0.3
+ },
+ {
+  "id": "shannon-1937",
+  "autor": "Claude Shannon",
+  "ano": 1937,
+  "titulo": "A Symbolic Analysis of Relay and Switching Circuits",
+  "grupo": "Histórico e fundacional",
+  "descricao": "Dissertação de mestrado considerada o nascimento dos circuitos digitais: aplica a álgebra booleana ao projeto de circuitos de relés e comutadores.",
+  "arquivo": "/pdf/artigos/shannon-1937.pdf",
+  "paginas": 27,
+  "mb": 7.2
+ },
+ {
+  "id": "hoare-1961",
+  "autor": "C. A. R. Hoare",
+  "ano": 1961,
+  "titulo": "Quicksort",
+  "grupo": "Algoritmos de ordenação",
+  "descricao": "Apresenta o Quicksort, baseado em divisão e conquista, um dos algoritmos de ordenação mais eficientes na prática até hoje.",
+  "arquivo": "/pdf/artigos/hoare-1961.pdf",
+  "paginas": 6,
+  "mb": 0.6
+ },
+ {
+  "id": "sedgewick-1978",
+  "autor": "Robert Sedgewick",
+  "ano": 1978,
+  "titulo": "Implementing Quicksort Programs",
+  "grupo": "Algoritmos de ordenação",
+  "descricao": "Otimizações práticas do Quicksort: remoção da recursão, subarquivos pequenos com inserção, mediana de três e desenrolamento de laços.",
+  "arquivo": "/pdf/artigos/sedgewick-1978.pdf",
+  "paginas": 11,
+  "mb": 1.0
+ },
+ {
+  "id": "martin-1971",
+  "autor": "William A. Martin",
+  "ano": 1971,
+  "titulo": "Sorting",
+  "grupo": "Algoritmos de ordenação",
+  "descricao": "Revisão com 37 algoritmos de ordenação e 100 referências das duas décadas anteriores, com comparações e sugestões para escolher o algoritmo certo.",
+  "arquivo": "/pdf/artigos/martin-1971.pdf",
+  "paginas": 28,
+  "mb": 1.8
+ }
+]

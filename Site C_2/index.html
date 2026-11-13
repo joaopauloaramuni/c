@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="description" content="Site C 2.0: códigos em C de João Paulo Aramuni como aluno (FUMEC, 2010–2011) e como professor (PUC Minas, 2024), com aulas em PDF, projetos com README e artigos clássicos da computação." />
+    <meta name="author" content="João Paulo Aramuni" />
+    <title>Site C - Programas em C, do aluno ao professor</title>
+
+    <!-- Aplica o tema (light/dark) ANTES do React carregar, para não piscar.
+         A chave "sitec:theme" é a mesma do src/config/site.js -->
+    <script>
+      (function () {
+        var tema = null;
+        try {
+          tema = localStorage.getItem("sitec:theme");
+        } catch (e) {}
+        if (tema !== "light" && tema !== "dark") {
+          tema = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+        }
+        document.documentElement.dataset.theme = tema;
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
